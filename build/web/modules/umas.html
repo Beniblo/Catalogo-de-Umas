@@ -1,0 +1,122 @@
+<div class="row" id="divDetalle" style="display: none;">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <span class="h4">Ficha de Corredora</span>
+                <button class="float-end me-2 btn btn-sm btn-light text-success fw-bold"
+                        onclick="cm.setDetalleVisible(false);">X</button>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-auto">
+                        <div style="width:200px; height:292px; background-color:#3e2723; padding: 2px; border-radius: 4px;">
+                            <img id="imgFoto" style="width: 100%; height: 100%; object-fit: contain;" src="" alt="Foto"/>
+                        </div>
+                        <div class="d-grid gap-2 mt-2" style="width: 156px;">
+                            <button class="btn btn-sm btn-outline-success" onclick="cm.verFoto('uma')">Ver Uma</button>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="cm.verFoto('real')">Ver Caballo</button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input id="txtIdPersonaje" type="text" class="form-control" placeholder="ID" readonly/>
+                                    <label for="txtIdPersonaje">ID Interno:</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input id="txtNombre" type="text" class="form-control" placeholder="Nombre" readonly/>
+                                    <label for="txtNombre">Nombre (Romaji):</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input id="txtNombreJapones" type="text" class="form-control" placeholder="Japones" readonly/>
+                                    <label for="txtNombreJapones">Nombre (Japonés):</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-4">
+                                <div class="form-floating">
+                                    <input id="txtFechaNacimiento" type="text" class="form-control" placeholder="Fecha" readonly/>
+                                    <label for="txtFechaNacimiento">Fecha Nacimiento:</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-floating">
+                                    <input id="txtRareza" type="text" class="form-control" placeholder="Rareza" readonly/>
+                                    <label for="txtRareza">Rareza Inicial (⭐):</label>
+                                </div>
+                            </div>
+                            <div class="col-4 pt-3">
+                                <div class="form-check">
+                                    <input id="chbCorredoraTierra" type="checkbox" class="form-check-input" disabled/>
+                                    <label for="chbCorredoraTierra" class="form-check-label">Especialista Tierra (Dirt)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                
+                <h5 class="text-success">Estadísticas Base</h5>
+                <div class="row mt-2">
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input id="txtVelocidad" type="text" class="form-control" placeholder="Velocidad" readonly/>
+                            <label for="txtVelocidad">Velocidad (Speed):</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input id="txtResistencia" type="text" class="form-control" placeholder="Resistencia" readonly/>
+                            <label for="txtResistencia">Resistencia (Stamina):</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input id="txtFuerza" type="text" class="form-control" placeholder="Fuerza" readonly/>
+                            <label for="txtFuerza">Fuerza (Power):</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <input type="hidden" id="txtUrlUma">
+                <input type="hidden" id="txtUrlReal">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4" id="divCatalogo">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-white">
+                <h4 class="text-success">Catálogo de Umamusume</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped text-center align-middle">
+                        <thead class="table-success">
+                            <tr>
+                                <th scope="col">Foto del Caballo</th>
+                                <th scope="col">Nombre</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyPersonajes">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
